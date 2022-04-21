@@ -179,12 +179,12 @@
             dhomeRecall: function () {// 后台回传数据
                 document.getElementById("search-button").disabled = true;
                 document.getElementById("search-animation").style.display = 'flex';
-                // console.log("JSON.stringify(this.payload): ", JSON.stringify(this.payload));
+                // console.log("JSON.stringify(this.payload): ", JSON.stringify(this.payload()));
 
                 $.ajax({
                     type: "POST",
                     url: this.serverAddress + "/query",
-                    data: JSON.stringify(this.payload),
+                    data: JSON.stringify(this.payload()),
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                 }).success(function (data, textStatus, jqXHR) {
