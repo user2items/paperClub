@@ -12,8 +12,7 @@
 <div class="container-fluid" id="app">
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                
+            <a class="navbar-brand" href="#"> 
                dHome召回测试-PinSage
             </a>
             <form class="form-inline my-2 my-lg-0">
@@ -88,7 +87,7 @@
                 <div class="card-body">
                     <pre>
                         <code>
-                            {{payload}}
+                            {{payload()}}
                         </code>
                     </pre>
                 </div>
@@ -104,7 +103,7 @@
                 "
                 id="search-animation"
             >
-                <img src="run.gif">
+                <img src="./src/run.gif">
             </div>
 
             <div style="width:100%; grid-template-columns: auto auto auto auto auto;display: grid;">
@@ -129,16 +128,8 @@
     .addBG{
         border:8px solid rgb(116, 6, 250)
     }
-    
 </style>
 <script>
-    
-    function uuidv4() {
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-            return v.toString(16);
-        });
-    }
 	
     const urlParams = new URLSearchParams(window.location.search);
     const port = urlParams.get('port') ?? 9909;
@@ -155,36 +146,36 @@
 		
 		 mounted: function () {
             this.$nextTick(function () {
-                $.getJSON("http://192.168.0.17:9909/sample", function (json) {
+                $.getJSON(this.serverAddress + "/sample", function (json) {
                     app.querys = json
                 });
             })
         },
-		
-        computed: {
-            
-            payload: function () {
-                p_id = uuidv4()
-				parm = [{
-                        media_ids: this.select_ids,
-                        media_tags: this.select_tags,
-                        }]
-                
-                return { data: parm, }
-            },
-
-            
-        },
+	
         methods: {
             
+            payload: function () {
+                params = [{
+                            media_ids: this.select_ids,
+                            media_tags: this.select_tags,
+                         }]
+                return { data: params }
+            },
             getId:function(id) {
                 var media_id = this.querys[id].meadia_id;
                 var tag_name = this.querys[id].tags;
-                this.select_ids.push(media_id);
-                this.select_tags.push(tag_name);
-                event.currentTarget.className = "addBG" // 添加样式
+                if (event.currentTarget.className == ""){
+                    this.select_ids.push(media_id);
+                    this.select_tags.push(tag_name);
+                    event.currentTarget.className = "addBG" // 添加样式
+                }else{
+                    this.select_ids.splice(this.select_ids.indexOf(media_id),1)
+                    this.select_tags.splice(this.select_tags.indexOf(tag_name),1)
+                    event.currentTarget.className = "" // 添加样式
+                }
+                console.log(this.select_ids)
             },
-			
+
             dhomeRecall: function () {// 后台回传数据
                 document.getElementById("search-button").disabled = true;
                 document.getElementById("search-animation").style.display = 'flex';
@@ -199,7 +190,6 @@
                 }).success(function (data, textStatus, jqXHR) {
                     document.getElementById("search-animation").style.display = 'none';
                     document.getElementById("search-button").disabled = false;
-                    console.log("data:",data)
                     app.results = data
                 }).fail(function () {
                     console.error("服务错误")
