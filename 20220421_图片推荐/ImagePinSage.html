@@ -13,7 +13,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"> 
-               dHome召回测试-PinSage
+               图片召回测试-PinSage
             </a>
             <form class="form-inline my-2 my-lg-0">
                 <input v-model="serverAddress" class="form-control mr-sm-2" type="search" placeholder="server address"
@@ -78,7 +78,7 @@
                 </div>
                 
                 <div class="card-body">
-                    <button id="search-button" type="button" v-on:click="dhomeRecall()" class="btn btn-primary"> 召回 </button>
+                    <button id="search-button" type="button" v-on:click="ImageRecall()" class="btn btn-primary"> 召回 </button>
                 </div>
             </div>
             <br>
@@ -176,7 +176,7 @@
                 console.log(this.select_ids)
             },
 
-            dhomeRecall: function () {// 后台回传数据
+            ImageRecall: function () {// 后台回传数据
                 document.getElementById("search-button").disabled = true;
                 document.getElementById("search-animation").style.display = 'flex';
                 // console.log("JSON.stringify(this.payload): ", JSON.stringify(this.payload()));

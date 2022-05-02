@@ -15,8 +15,7 @@ import  requests
 def get_urls():
     """ 获取图片链接 """
     down_urls = []
-    projects =  pd.read_csv("/data/1_qunosen/2022/paddlerec/pinsage/dhome_style/origin_data/project.csv", 
-                            sep='\t', names=['project_id', 'tags', 'urls', 'media_ids'])
+    projects =  pd.read_csv("./project.csv", sep='\t', names=['project_id', 'tags', 'urls', 'media_ids'])
     for line in projects.itertuples():
         urls = eval(line[3])
         media_ids = eval(line[4])
@@ -75,7 +74,7 @@ def CheckImages():
     return errIds
 
 ImgUrls = []
-ImageDir = '/data/1_qunosen/2022/paddlerec/pinsage/dhome_style/images'
+ImageDir = './images'
 if not ImgUrls:
     ImgUrls = get_urls()
 
