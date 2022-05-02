@@ -3,7 +3,7 @@
 &nbsp;
 
  ***
- 感谢各位小伙伴对 [<font color=#FF6600> **paperClub** </font>](http://www.infersite.com/)
+ 感谢各位小伙伴对 [<font color=#FF6600> **paperClub** </font>](http://www.infersite.com/) 的关注
 
 ![avatar](./static/paperClub_wx2.png)
 ***
