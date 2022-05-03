@@ -41,9 +41,9 @@ def video_show(cap, save_path, is_save=False):
     while (cap.isOpened()):
         ret, frame = cap.read()
         if ret == True:
-            frame1 = process(frame, opt=11)
-            frame2 = process(frame, opt=2)
-            frame3 = process(frame, opt=3)
+            frame1 = process(frame, opt=5)
+            frame2 = process(frame, opt=0)
+            frame3 = process(frame, opt=1)
 
             mat1 = np.hstack((frame, frame1))
             mat2 = np.hstack((frame3, frame2))
@@ -63,32 +63,18 @@ def video_show(cap, save_path, is_save=False):
 
 
 
-def process(image, opt=1):
+def process(image, opt=0):
     dst = None
     if opt == 0:
-        dst = cv2.bitwise_not(image)
-    if opt == 1:
-        dst = cv2.GaussianBlur(image, (0, 0), 3)
-    if opt == 2:
         dst = cv2.Canny(image, 120, 120)
         dst = cv2.cvtColor(dst, cv2.COLOR_GRAY2BGR)
-    if opt == 3:
+    if opt == 1:
         dst = cv2.flip(image, 0)
-    if opt == 4:
+    if opt == 3:
         dst = cv2.flip(image, 1)
-    if opt == 5:
+    if opt == 4:
         dst = cv2.flip(image, -1)
-    if opt == 6:
-        dst = cv2.cvtColor(cv2.cvtColor(image, cv2.COLOR_BGR2GRAY), cv2.COLOR_GRAY2BGR)
-    if opt == 7:
-        dst = cv2.cvtColor(image, cv2.COLOR_BGR2HSV_FULL)
-    if opt == 8:
-        dst = cv2.cvtColor(image, cv2.COLORMAP_JET)
-    if opt == 9:
-        dst = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-    if opt == 10:
-        dst = cv2.cvtColor(image, cv2.COLOR_BGR2LUV)
-    if opt == 11:
+    if opt == 5:
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         ret, dst = cv2.threshold(~gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
         dst = cv2.cvtColor(dst, cv2.COLOR_GRAY2BGR)
