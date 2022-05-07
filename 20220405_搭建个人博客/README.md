@@ -18,3 +18,4 @@ npm run build
 npm run build --report
 ```
 
+![avatar](./static/any1one_paperClub.png)

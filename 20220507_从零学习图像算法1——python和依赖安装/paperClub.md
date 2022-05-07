@@ -12,5 +12,5 @@
  
  > 3. 分享内容包括开源项目和自研项目，如在引用或使用时，考虑不周、遗漏引用信息或涉及版权等，请您及时联系。如果您对某些内容感兴趣，我们可以一起讨论、交流和学习。
 
-![avatar](./static/paperClub_wx2.png)
+![avatar](./static/any1one_paperClub.png)
 ***
