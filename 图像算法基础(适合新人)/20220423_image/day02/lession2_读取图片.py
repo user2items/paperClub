@@ -11,32 +11,32 @@ import numpy as np
 from urllib import request
 
 # ## 图片
-#
-# img_zero = np.zeros((3,3), dtype=np.uint8)
-# print(img_zero)
-#
-# cv2.namedWindow("img_zero", 0)
-# cv2.imshow("img_zero", img_zero)
-#
-# cv2.waitKey(0)
-#
-#
-#
-# ## 读取本地图片
-# img_path = r'./src/imgs/m1.jpg'
-# img = cv2.imread(img_path)
-#
-# cv2.namedWindow("img_show", 0)
-# cv2.imshow("img_show", img)
-#
-# cv2.waitKey(0)
-#
-# print(img.shape)
+
+img_zero = np.zeros((3,3), dtype=np.uint8)
+print(img_zero)
+
+cv2.namedWindow("img_zero", 0)
+cv2.imshow("img_zero", img_zero)
+
+cv2.waitKey(0)
+
+
+
+## 读取本地图片
+img_path = r'../src/imgs/m1.jpg'
+img = cv2.imread(img_path)
+
+cv2.namedWindow("img_show", 0)
+cv2.imshow("img_show", img)
+
+cv2.waitKey(0)
+
+print(img.shape)
 
 
 #### 显示不同 flags 差异：
 
-filename = "./src/imgs/1.jpg"
+filename = "../src/imgs/1.jpg"
 
 def cv2flags(filename):
 
@@ -51,19 +51,19 @@ def cv2flags(filename):
 # cv2flags(filename)
 
 
-# ##### 数组访问
-#
-# ## 读取本地图片
-# img_path = r'./src/imgs/m1.jpg'
-# img = cv2.imread(img_path)
-#
-#
-# img[100:200, 600:800] = [255, 0, 0 ]
-#
-# cv2.namedWindow("img_show", 0)
-# cv2.imshow("img_show", img)
-#
-# cv2.waitKey(0)
+##### 数组访问
+
+## 读取本地图片
+img_path = r'../src/imgs/m1.jpg'
+img = cv2.imread(img_path)
+
+
+img[100:200, 600:800] = [255, 0, 0 ]
+
+cv2.namedWindow("img_show", 0)
+cv2.imshow("img_show", img)
+
+cv2.waitKey(0)
 
 
 def show_url_image(url_path):
@@ -129,5 +129,5 @@ def show_video(video_path):
 
 
 
-video_path = "src/imgs/you_are_angle.mp4"
+video_path = "../src/imgs/you_are_angle.mp4"
 show_video(video_path)
