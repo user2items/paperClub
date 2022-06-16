@@ -23,7 +23,7 @@ def img_check(img_dir, file_type = '.jpg'):
 
 
 def img_download(url_data):
-    img_dir = '/data/1_qunosen/2022/paddlerec/pinsage/dhome_style/images'
+    img_dir = './images'
     (img_url, media_id) = url_data
     sleep_time = random.sample(list(range(1, 15)), 1)[0] /10.0
     save_file = os.path.join(img_dir, f"{media_id}.jpg")
@@ -67,7 +67,7 @@ def multi_downs(urls:list, batch_size:int = 12):
             # time.sleep(1)
 
 
-projects =  pd.read_csv("/data/1_qunosen/2022/paddlerec/pinsage/dhome_style/origin_data/project.csv", sep='\t', names=['project_id', 'tags', 'urls', 'media_ids'])
+projects =  pd.read_csv("./project.csv", sep='\t', names=['project_id', 'tags', 'urls', 'media_ids'])
 
 down_urls = []
 for line in projects.itertuples():
@@ -80,30 +80,6 @@ for line in projects.itertuples():
 
 
 multi_downs(down_urls[::-1], 6)
-
-# use_urls = down_urls[:30000]
-# use_urls = down_urls[30000:50000]
-# use_urls = down_urls[50000:80000]
-# use_urls = down_urls[80000:100000]
-# use_urls = down_urls[100000:120000]
-# use_urls = down_urls[120000:150000]
-# use_urls = down_urls[150000:180000]
-# use_urls = down_urls[180000:200000]
-# use_urls = down_urls[200000:220000]
-# use_urls = down_urls[220000:240000]
-# use_urls = down_urls[240000:]
-# use_urls = down_urls[::-1][:20000]
-# use_urls = down_urls[::-1][20000:40000]
-# use_urls = down_urls[::-1][40000:60000]
-# use_urls = down_urls[::-1][60000:80000]
-# use_urls = down_urls[::-1][80000:100000]
-# use_urls = down_urls[::-1][100000:120000]
-# use_urls = down_urls[::-1][120000:160000]
-# use_urls = down_urls[::-1][160000:180000]
-# use_urls = down_urls[::-1][180000:200000]
-# use_urls = down_urls[::-1][200000:220000]
-# use_urls = down_urls[::-1][220000:]
-
 # for url_data in tqdm(use_urls):
 #     img_download(url_data)
     
