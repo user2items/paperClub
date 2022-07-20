@@ -67,10 +67,11 @@ def mask_inner_shape(mask_bin):
 	rect = inner_rect(c.reshape(c.shape[0], 2))
 	xs = sorted([i[0] for i in rect])
 	ys = sorted([i[1] for i in rect])
-	rect_x1 = xs[1]
-	rect_x2 = xs[2]
-	rect_y1 = ys[1]
-	rect_y2 = ys[2]
+	rect_x1 = int(xs[1])
+	rect_x2 = int(xs[2])
+	rect_y1 = int(ys[1])
+	rect_y2 = int(ys[2])
+
 
 	result = cv2.cvtColor(mask_bin, cv2.COLOR_GRAY2BGR)
 	cv2.rectangle(result, (x1,y1),(x2,y2), (255, 0, 0), 2)
