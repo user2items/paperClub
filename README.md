@@ -14,10 +14,10 @@
 
 &nbsp;
 
-创建 [<font color=#FF6600> **sum-blo** </font>](http://www.infersite.com/) 和  <font color=#FF6600> **paperClub** </font> 微信公众号，主要是为了分享项目，共同成长。  
+创建 [<font color=#FF6600> **sum-blo** </font>](http://www.infersite.com/) 和  [<font color=#FF6600> **paperClub** </font>](https://mp.weixin.qq.com/profile?src=3&timestamp=1660383334&ver=1&signature=FvSYR0sMRqiwnnFIu0Z-uNmqfw9hFt-ESjEuQneLeDzF2GHF*8obhjl2TOTxzhpdTnkrxit88EJFjxfD24*O2w==) 微信公众号，主要是为了分享项目，共同成长。  
 
 
- > 1. 感谢各位小伙伴对 [<font color=#FF6600> **paperClub** </font>](http://www.infersite.com/) 的关注， 您的点赞、鼓励和留言，都是我深夜坚持的一份动力，无论褒贬，都是我们行进途中最好回馈，也都会被认真对待。
+ > 1. 感谢各位小伙伴对 [<font color=#FF6600> **sum-blo** </font>](http://www.infersite.com/) 和  [<font color=#FF6600> **paperClub** </font>](https://mp.weixin.qq.com/profile?src=3&timestamp=1660383334&ver=1&signature=FvSYR0sMRqiwnnFIu0Z-uNmqfw9hFt-ESjEuQneLeDzF2GHF*8obhjl2TOTxzhpdTnkrxit88EJFjxfD24*O2w==) 的关注， 您的点赞、鼓励和留言，都是我深夜坚持的一份动力，无论褒贬，都是我们行进途中最好回馈，也都会被认真对待。
  
  > 2. 我们将持续分享各类、好玩且有趣的算法应用及工程和项目，欢迎分享和转发。沟通、学习和交流，请与我联系，虽然平时忙，但留言必回，勿急，感谢理解！
  
