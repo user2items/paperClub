@@ -25,7 +25,7 @@
 
 
 ***
-**If you like this project, you can give me a cup of coffee：**
+** 如果喜欢这个项目，欢迎打赏、请我喝瓶饮料吧？**
 ![avatar](./static/pay.png)
 
 ***
