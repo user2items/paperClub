@@ -10,7 +10,13 @@
 ![avatar](./static/paperClub_wx2.png)
 
 
-
+&nbsp;
+***
+很高兴这个项目代码或许对你有帮助，请我吃包辣条或喝瓶可乐吧!
+&nbsp;
+微信打赏:
+&nbsp;
+![avatar](./static/pay.png)
 
 &nbsp;
 
@@ -24,10 +30,7 @@
  > 3. 分享内容包括开源项目和自研项目，如在引用或使用时，考虑不周、遗漏引用信息或涉及版权等，请您及时联系。如果您对某些内容感兴趣，我们可以一起讨论、交流和学习，邮箱：<font color=#FF6600> **paperclub@163.com** </font>
 
 
-***
-** 如果喜欢这个项目，欢迎打赏、请我喝瓶饮料吧？**
-![avatar](./static/pay.png)
-
+&nbsp;
 ***
 ![avatar](./static/any1one_paperClub.png)
 
